@@ -17,11 +17,11 @@
     }
 
     public static function all() {
-      try {
-        Post::init();
-      } catch(Exception $e) {
-        require_once('views/pages/error.php');
-      }
+      /* try { */
+      /*   Post::init(); */
+      /* } catch(Exception $e) { */
+      /*   require_once('views/pages/error.php'); */
+      /* } */
 
       $list = [];
       $db = Db::getInstance();

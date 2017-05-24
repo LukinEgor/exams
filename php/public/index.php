@@ -1,6 +1,8 @@
 <?php
   try {
   require_once('connection.php');
+  /* require_once('models/abstract_dao.php'); */
+  /* require_once('models/student_dao.php'); */
 
    if (isset($_GET['controller']) && isset($_GET['action'])) {
     $controller = $_GET['controller'];

@@ -10,13 +10,18 @@
         require_once('models/post.php');
         $controller = new PostsController();
       break;
+      case 'students':
+        include_once('models/students_dao.php');
+        $controller = new StudentsController();
+      break;
     }
 
     $controller->{ $action }();
   }
 
   $controllers = array('pages' => ['home', 'error'],
-    'posts' => ['index', 'show', 'create', 'make']);
+    'posts' => ['index', 'show', 'create', 'make'],
+    'students' => ['index', 'create', 'make']);
 
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
